@@ -114,7 +114,7 @@
 </em>/<br>public class CheckMail {</li>
 </ul>
 <p>public String checkMail(String userName,String password) {<br>String host = “xxxxx”; // AD服务器IP<br>String port = “389”; // 端口<br>// String domain = “@domain.com.cn”; //邮箱的后缀名<br>String user=”domain\user”;//这里有两种格式，domain\User或邮箱的后缀名,建议用domain\User这种格式<br>String url = new String(“ldap://“ + host + “:” + port);<br>// String user = userName.indexOf(domain) &gt; 0 ? userName : userName + domain;<br>Hashtable env = new Hashtable();<br>DirContext ctx;<br>env.put(Context.SECURITY_AUTHENTICATION, “simple”);//一种模式，不用管，就这么写就可以了<br>env.put(Context.SECURITY_PRINCIPAL, user);<br>env.put(Context.SECURITY_CREDENTIALS, password);<br>env.put(Context.INITIAL_CONTEXT_FACTORY,<br>“com.sun.jndi.ldap.LdapCtxFactory”);<br>env.put(Context.PROVIDER_URL, url);<br>try {<br>ctx = new InitialDirContext(env);<br>ctx.close();<br>return userName; //验证成功返回name<br>} catch (NamingException err) {<br>return “”;//验证失败返回空<br>}</p>
-<p>}<br>}<br><img src="../../images/manwei.png" alt="Alt text"></p>
+<p>}<br>}<br><img src="/images/manwei.png" alt="&quot;&quot;"></p>
 
       
     </div>
