@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[视频测试]]></title>
+    <url>%2F2018%2F05%2F21%2F%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[your browser does not support the video tag]]></content>
+      <categories>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>拉丁</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[第一个爬虫项目]]></title>
+    <url>%2F2018%2F05%2F21%2F%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[前言：WebMagic项目代码分为核心和扩展两部分。核心部分(webmagic-core)是一个精简的、模块化的爬虫实现，而扩展部分则包括一些便利的、实用性的功能。WebMagic的架构设计参照了Scrapy，目标是尽量的模块化，并体现爬虫的功能特点。 这部分提供非常简单、灵活的API，在基本不改变开发模式的情况下，编写一个爬虫。 扩展部分(webmagic-extension)提供一些便捷的功能，例如注解模式编写爬虫等。同时内置了一些常用的组件，便于爬虫开发。123456789101112131415161718192021222324252627282930import us.codecraft.webmagic.Page;import us.codecraft.webmagic.Site;import us.codecraft.webmagic.Spider;import us.codecraft.webmagic.processor.PageProcessor;public class GithubRepoPageProcessor implements PageProcessor &#123; private Site site = Site.me().setRetryTimes(3).setSleepTime(100); @Override public void process(Page page) &#123; page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/\\w+/\\w+)").all()); page.putField("author", page.getUrl().regex("https://github\\.com/(\\w+)/.*").toString()); page.putField("name", page.getHtml().xpath("//h1[@class='entry-title public']/strong/a/text()").toString()); if (page.getResultItems().get("name")==null)&#123; //skip this page page.setSkip(true); &#125; page.putField("readme", page.getHtml().xpath("//div[@id='readme']/tidyText()")); &#125; @Override public Site getSite() &#123; return site; &#125; public static void main(String[] args) &#123; Spider.create(new GithubRepoPageProcessor()).addUrl("https://github.com/code4craft").thread(5).run(); &#125;&#125; 点击main方法，选择“运行”，你会发现爬虫已经可以正常工作了！]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[java验证AD域用户登录]]></title>
+    <url>%2F2018%2F05%2F18%2Fjava%E9%AA%8C%E8%AF%81AD%E5%9F%9F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[java验证AD域用户登录package com.home.util; import java.util.Hashtable; import javax.naming.Context;import javax.naming.NamingException;import javax.naming.directory.DirContext;import javax.naming.directory.InitialDirContext; import com.home.conf.Config; /** java验证AD域用户登录 传入用户名(userName)和密码(password)进行验证，验证成功返回用户名 @author guob /public class CheckMail { public String checkMail(String userName,String password) {String host = “xxxxx”; // AD服务器IPString port = “389”; // 端口// String domain = “@domain.com.cn”; //邮箱的后缀名String user=”domain\user”;//这里有两种格式，domain\User或邮箱的后缀名,建议用domain\User这种格式String url = new String(“ldap://“ + host + “:” + port);// String user = userName.indexOf(domain) &gt; 0 ? userName : userName + domain;Hashtable env = new Hashtable();DirContext ctx;env.put(Context.SECURITY_AUTHENTICATION, “simple”);//一种模式，不用管，就这么写就可以了env.put(Context.SECURITY_PRINCIPAL, user);env.put(Context.SECURITY_CREDENTIALS, password);env.put(Context.INITIAL_CONTEXT_FACTORY,“com.sun.jndi.ldap.LdapCtxFactory”);env.put(Context.PROVIDER_URL, url);try {ctx = new InitialDirContext(env);ctx.close();return userName; //验证成功返回name} catch (NamingException err) {return “”;//验证失败返回空} }}]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[针对github权限导致hexo部署失败的解决方案]]></title>
+    <url>%2F2018%2F05%2F11%2F%E9%92%88%E5%AF%B9github%E6%9D%83%E9%99%90%E5%AF%BC%E8%87%B4hexo%E9%83%A8%E7%BD%B2%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[hexo deplay出错，没有反应,以下是解决过程：1、因为没有报错信息，所以直接在网上搜解决方案，集广大网友们的智慧，然后使用了npm install hexo-deployer-git –save，而后hexo deploy，但是没有解决问题，而且爆出警告： npm WARN optional Skipping failed optional dependency /chokidar/fsevents:npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.0.152、更新npm npm install npm -g ，更新成功 3、继续npm install hexo-deployer-git –save，hexo deploy 还是不行： INFO Deploying: gitINFO Clearing .deploy_git folder…INFO Copying files from public folder…fatal: Not a git repository (or any of the parent directories): .gitFATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlError: fatal: Not a git repository (or any of the parent directories): .git at ChildProcess.&lt;anonymous&gt; (E:\blog\HexoBlog\node_modules\hexo-util\lib\spawn.js:37:17) at emitTwo (events.js:87:13) …… (E:\blog\HexoBlog\node_modules\cross-spawn\lib\enoent.js:40:29) at maybeClose (internal/child_process.js:827:16) at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11) at emitOne (events.js:77:13) at Socket.emit (events.js:169:7) at Pipe._onclose (net.js:477:12) 4、后来灵机一动，把.deploy_git文件夹手动删除了，重新hexo deploy了一次，成功！]]></content>
+      <categories>
+        <category>solution</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+</search>
