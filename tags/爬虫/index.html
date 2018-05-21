@@ -3,20 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>针对github权限导致hexo部署失败的解决方案 | 柚子の聖騎士団</title>
+  <title>Tag: 爬虫 | 柚子の聖騎士団</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo deplay出错，没有反应,以下是解决过程：">
-<meta name="keywords" content="Blog">
-<meta property="og:type" content="article">
-<meta property="og:title" content="针对github权限导致hexo部署失败的解决方案">
-<meta property="og:url" content="http://yoursite.com/2018/05/11/针对github权限导致hexo部署失败的解决方案/index.html">
+  <meta name="description" content="文艺小青年">
+<meta property="og:type" content="website">
+<meta property="og:title" content="柚子の聖騎士団">
+<meta property="og:url" content="http://yoursite.com/tags/爬虫/index.html">
 <meta property="og:site_name" content="柚子の聖騎士団">
-<meta property="og:description" content="hexo deplay出错，没有反应,以下是解决过程：">
+<meta property="og:description" content="文艺小青年">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-19T01:20:23.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="针对github权限导致hexo部署失败的解决方案">
-<meta name="twitter:description" content="hexo deplay出错，没有反应,以下是解决过程：">
+<meta name="twitter:title" content="柚子の聖騎士団">
+<meta name="twitter:description" content="文艺小青年">
   
     <link rel="alternate" href="/atom.xml" title="柚子の聖騎士団" type="application/atom+xml">
   
@@ -69,94 +67,42 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-针对github权限导致hexo部署失败的解决方案" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/11/针对github权限导致hexo部署失败的解决方案/" class="article-date">
-  <time class="post-time" datetime="2018-05-11T05:45:00.000Z" itemprop="datePublished">
+        <section id="main">
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap animated rubberBand">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2018/05/21/第一个爬虫项目/" class="archive-article-date">
+  <time class="post-time" datetime="2018-05-21T05:13:00.000Z" itemprop="datePublished">
     <span class="post-month">5月</span><br/>
-    <span class="post-day">11</span>
+    <span class="post-day">21</span>
   </time>
 </a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
-    <h1 class="article-title" itemprop="name">
-      针对github权限导致hexo部署失败的解决方案
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/21/第一个爬虫项目/">第一个爬虫项目</a>
     </h1>
   
 
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/solution/">solution</a>
+    </header>
   </div>
-
-          
-              
-  &nbsp; | &nbsp;
-  <div class="view-box">
-    <span id="/2018/05/11/针对github权限导致hexo部署失败的解决方案/" class="leancloud_visitors" data-flag-title="针对github权限导致hexo部署失败的解决方案">
-      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
-    </span>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hexo deplay出错，没有反应,以下是解决过程：<br><a id="more"></a><br>1、因为没有报错信息，所以直接在网上搜解决方案，集广大网友们的智慧，然后使用了npm install hexo-deployer-git –save，而后hexo deploy，但是没有解决问题，而且爆出警告：</p>
-<p>npm WARN optional Skipping failed optional dependency /chokidar/fsevents:<br>npm WARN notsup Not compatible with your operating system or architecture: <a href="mailto:fsevents@1.0.15" target="_blank" rel="noopener">fsevents@1.0.15</a><br>2、更新npm npm install npm -g ，更新成功</p>
-<p>3、继续npm install hexo-deployer-git –save，hexo deploy 还是不行：</p>
-<p>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder…<br>INFO  Copying files from public folder…<br>fatal: Not a git repository (or any of the parent directories): .git<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>Error: fatal: Not a git repository (or any of the parent directories): .git</p>
-<pre><code>at ChildProcess.&lt;anonymous&gt; (E:\blog\HexoBlog\node_modules\hexo-util\lib\spawn.js:37:17)
-at emitTwo (events.js:87:13)
-……
-(E:\blog\HexoBlog\node_modules\cross-spawn\lib\enoent.js:40:29)
-at maybeClose (internal/child_process.js:827:16)
-at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11)
-at emitOne (events.js:77:13)
-at Socket.emit (events.js:169:7)
-at Pipe._onclose (net.js:477:12)
-</code></pre><p>4、后来灵机一动，把.deploy_git文件夹手动删除了，重新hexo deploy了一次，成功！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/11/针对github权限导致hexo部署失败的解决方案/" data-id="cjhfu5fus000240b25abd7lq3" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/">Blog</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/05/18/java验证AD域用户登录/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          java验证AD域用户登录
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
 </article>
-
-
+  
+  
+    </div></section>
+  
 
 </section>
         
