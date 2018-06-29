@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2018/6 | 柚子の聖騎士団</title>
+  <title>MyBatis 判断条件为等于的问题 | 柚子の聖騎士団</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文艺小青年">
-<meta property="og:type" content="website">
-<meta property="og:title" content="柚子の聖騎士団">
-<meta property="og:url" content="http://yoursite.com/archives/2018/06/index.html">
+  <meta name="description" content="MyBatis 判断条件为等于的问题在用MyBatis操作数据库的时候相信很多人都用到，当在判断null, 大于，大于等于，小于，小于等于，不等于时估计很多都用到，比较容易实现了，这里就省略了，但唯独判断条件为等于时估计蛮多人遇到坑了， 于是把这个实验总结并简要记录一下；">
+<meta name="keywords" content="mybatis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatis 判断条件为等于的问题">
+<meta property="og:url" content="http://yoursite.com/2018/06/29/MyBatis-判断条件为等于的问题/index.html">
 <meta property="og:site_name" content="柚子の聖騎士団">
-<meta property="og:description" content="文艺小青年">
+<meta property="og:description" content="MyBatis 判断条件为等于的问题在用MyBatis操作数据库的时候相信很多人都用到，当在判断null, 大于，大于等于，小于，小于等于，不等于时估计很多都用到，比较容易实现了，这里就省略了，但唯独判断条件为等于时估计蛮多人遇到坑了， 于是把这个实验总结并简要记录一下；">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-29T01:45:33.662Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="柚子の聖騎士団">
-<meta name="twitter:description" content="文艺小青年">
+<meta name="twitter:title" content="MyBatis 判断条件为等于的问题">
+<meta name="twitter:description" content="MyBatis 判断条件为等于的问题在用MyBatis操作数据库的时候相信很多人都用到，当在判断null, 大于，大于等于，小于，小于等于，不等于时估计很多都用到，比较容易实现了，这里就省略了，但唯独判断条件为等于时估计蛮多人遇到坑了， 于是把这个实验总结并简要记录一下；">
   
     <link rel="alternate" href="/atom.xml" title="柚子の聖騎士団" type="application/atom+xml">
   
@@ -67,64 +69,79 @@
   </div>
 </div>
 
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap animated rubberBand">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/29/MyBatis-判断条件为等于的问题/" class="archive-article-date">
+        <section id="main"><article id="post-MyBatis-判断条件为等于的问题" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/29/MyBatis-判断条件为等于的问题/" class="article-date">
   <time class="post-time" datetime="2018-06-29T01:44:00.000Z" itemprop="datePublished">
     <span class="post-month">6月</span><br/>
     <span class="post-day">29</span>
   </time>
 </a>
-      
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/MyBatis-判断条件为等于的问题/">MyBatis 判断条件为等于的问题</a>
+    <h1 class="article-title" itemprop="name">
+      MyBatis 判断条件为等于的问题
     </h1>
   
 
-    </header>
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
   </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/29/jsp页面报错javax-servlet-http-HttpServlet/" class="archive-article-date">
-  <time class="post-time" datetime="2018-06-29T01:02:00.000Z" itemprop="datePublished">
-    <span class="post-month">6月</span><br/>
-    <span class="post-day">29</span>
-  </time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/jsp页面报错javax-servlet-http-HttpServlet/">jsp页面报错javax.servlet.http.HttpServlet</a>
-    </h1>
-  
 
-    </header>
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2018/06/29/MyBatis-判断条件为等于的问题/" class="leancloud_visitors" data-flag-title="MyBatis 判断条件为等于的问题">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
   </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="MyBatis-判断条件为等于的问题"><a href="#MyBatis-判断条件为等于的问题" class="headerlink" title="MyBatis 判断条件为等于的问题"></a>MyBatis 判断条件为等于的问题</h4><p>在用MyBatis操作数据库的时候相信很多人都用到，当在判断null, 大于，大于等于，小于，小于等于，不等于时估计很多都用到，比较容易实现了，这里就省略了，但唯独判断条件为等于时估计蛮多人遇到坑了， 于是把这个实验总结并简要记录一下；<br><a id="more"></a><br>当MyBatis 判断条件为等于的时候，常量需要加 .toString() 来转换，这种方法是稳定的，推荐使用，比如：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 正确的，稳定，推荐使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"newsImage != null and newsImage == '1'.toString()"</span>&gt;</span></span><br><span class="line">	&lt;![CDATA[ and len(newsImage) &gt; 0 ]]&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其中判断 newsImage == ‘1’ 时，人为认为成功，但实际上是不成功的，需要改为  newsImage == ‘1’.toString()方可成功，原因具体没有细入研究，根据实际使用推测应该是 “等于” 在java中是个比较复杂问题，涉及的“等于”有可能是变量地址相等，或者是变量值内容相等，在XML文件中简单的 == 在经过MyBatis处理后无法判断是哪种类型的“相等”，所以加.toString()做强制转换操作，MyBatis就知道是值内容的比较，当然就成功了； 注意这个常量不限于数字，对于字母，如 ‘y’ 同样需要加上 .toString()方可成功，如下:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 正确的，稳定，推荐使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"newsImage != null and newsImage == 'y'.toString()"</span>&gt;</span></span><br><span class="line">	&lt;![CDATA[ and len(newsImage) &gt; 0 ]]&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>那给变量加 .toString() 可以吗？这个是错误的，至少实际在所使用的myBatis版本（mybatis-3.2.5.jar,mybatis-spring-1.2.1.jar）是不可以，以后版本不知道，这应该是在经过 myBatis 时，影响到其转换操作，故出现错误，如下是错误的：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 错误的 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"newsImage != null and newsImage.toString() == 'y'"</span>&gt;</span></span><br><span class="line">	&lt;![CDATA[ and len(newsImage) &gt; 0 ]]&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>既然是值内容的比较，我们自然联想到 Java 的 equals ， equalsIgnoreCase 关键字，用这个可以吗？ 实际测试过，有时成功，有时不成功（有可能跟我的机子和我使用的Java环境的原因），很不稳定，不推荐使用，所以如下是不稳定的：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--有时成功，有时不成功，不推荐使用--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"newsImage != null and newsImage.equal('y')"</span>&gt;</span></span><br><span class="line">	&lt;![CDATA[ and len(newsImage) &gt; 0 ]]&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/29/MyBatis-判断条件为等于的问题/" data-id="cjizbhy130004gkb2t42qmv9p" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mybatis/">mybatis</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/29/jsp页面报错javax-servlet-http-HttpServlet/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">jsp页面报错javax.servlet.http.HttpServlet</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 
 
 </section>
