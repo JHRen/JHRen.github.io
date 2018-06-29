@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[jsp页面报错javax.servlet.http.HttpServlet]]></title>
+    <url>%2F2018%2F06%2F29%2Fjsp%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99javax-servlet-http-HttpServlet%2F</url>
+    <content type="text"><![CDATA[创建maven工程jsp页面报错javax.servlet.http.HttpServlet，查看具体报错信息如下：The superclass “javax.servlet.http.HttpServlet” was not found on the Java Build Path原因是缺少servlet-api.jar包在pom.xml中引入servlet-api.jar并保存，如下所示 123456&lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt; &lt;version&gt;2.5&lt;/version&gt; &lt;scope&gt;provided&lt;/scope&gt; &lt;/dependency&gt;]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>error</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[视频测试]]></title>
     <url>%2F2018%2F05%2F21%2F%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"><![CDATA[your browser does not support the video tag]]></content>
@@ -9,17 +20,6 @@
       </categories>
       <tags>
         <tag>拉丁</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[第一个爬虫项目]]></title>
-    <url>%2F2018%2F05%2F21%2F%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%2F</url>
-    <content type="text"><![CDATA[前言：WebMagic项目代码分为核心和扩展两部分。核心部分(webmagic-core)是一个精简的、模块化的爬虫实现，而扩展部分则包括一些便利的、实用性的功能。WebMagic的架构设计参照了Scrapy，目标是尽量的模块化，并体现爬虫的功能特点。 这部分提供非常简单、灵活的API，在基本不改变开发模式的情况下，编写一个爬虫。 扩展部分(webmagic-extension)提供一些便捷的功能，例如注解模式编写爬虫等。同时内置了一些常用的组件，便于爬虫开发。123456789101112131415161718192021222324252627282930import us.codecraft.webmagic.Page;import us.codecraft.webmagic.Site;import us.codecraft.webmagic.Spider;import us.codecraft.webmagic.processor.PageProcessor;public class GithubRepoPageProcessor implements PageProcessor &#123; private Site site = Site.me().setRetryTimes(3).setSleepTime(100); @Override public void process(Page page) &#123; page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/\\w+/\\w+)").all()); page.putField("author", page.getUrl().regex("https://github\\.com/(\\w+)/.*").toString()); page.putField("name", page.getHtml().xpath("//h1[@class='entry-title public']/strong/a/text()").toString()); if (page.getResultItems().get("name")==null)&#123; //skip this page page.setSkip(true); &#125; page.putField("readme", page.getHtml().xpath("//div[@id='readme']/tidyText()")); &#125; @Override public Site getSite() &#123; return site; &#125; public static void main(String[] args) &#123; Spider.create(new GithubRepoPageProcessor()).addUrl("https://github.com/code4craft").thread(5).run(); &#125;&#125; 点击main方法，选择“运行”，你会发现爬虫已经可以正常工作了！]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
